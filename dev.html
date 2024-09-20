@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Length Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"] {
+            padding: 10px;
+            margin: 10px 0;
+            width: 200px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        #result {
+            font-size: 18px;
+            color: #555;
+        }
+    </style>
+    <script>
+        function calculateLength() {
+            const nameInput = document.getElementById('nameInput').value;
+            const length = nameInput.length;
+            document.getElementById('result').innerText = `Number of letters: ${length}`;
+        }
+    </script>
+</head>
+<body>
+    <h1>Name Length Calculator</h1>
+    <form onsubmit="event.preventDefault(); calculateLength();">
+        <label for="nameInput">Enter your name:</label>
+        <input type="text" id="nameInput" required>
+        <button type="submit">Submit</button>
+    </form>
+    <p id="result"></p>
+</body>
+</html>
